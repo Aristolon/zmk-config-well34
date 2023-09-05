@@ -18,6 +18,22 @@
 
 / {
     behaviors {
+        tab_space_ctrl: tab_space_ctrl {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAB_ESC_CTRL";
+            #binding-cells = <0>;
+            bindings =
+                <&mt LCTRL SPACE>,
+                <&kp TAB>;
+        };
+        qmark_slash_shift: qmark_slash_shift {
+            compatible = "zmk,behavior-tap-dance";
+            label = "QMARK_SLASH_SHIFT";
+            #binding-cells = <0>;
+            bindings =
+                <&mt RIGHT_SHIFT SLASH>,
+                <&kp QMARK>;
+        };
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "homerow mods";
@@ -53,6 +69,78 @@
     };
 
     macros {
+        pl: pl {
+            compatible = "zmk,behavior-macro";
+            label = "PL";
+            #binding-cells = <0>;
+            bindings = <&kp P &kp L &kp ENTER>;
+        };
+        xl: xl {
+            compatible = "zmk,behavior-macro";
+            label = "XL";
+            #binding-cells = <0>;
+            bindings = <&kp X &kp L &kp ENTER>;
+        };
+        pu: pu {
+            compatible = "zmk,behavior-macro";
+            label = "PU";
+            #binding-cells = <0>;
+            bindings = <&kp P &kp U &kp ENTER>;
+        };
+        di: di {
+            compatible = "zmk,behavior-macro";
+            label = "DI";
+            #binding-cells = <0>;
+            bindings = <&kp D &kp I &kp ENTER>;
+        };
+        tmn_s: tmn_s {
+            compatible = "zmk,behavior-macro";
+            label = "TMN_S";
+            #binding-cells = <0>;
+            bindings = <&kp G &kp X &kp Y &kp C &kp ENTER>;
+        };
+        tmn_FH: tmn_FH {
+            compatible = "zmk,behavior-macro";
+            label = "TMN_FH";
+            #binding-cells = <0>;
+            bindings = <&kp B &kp X &kp H &kp S &kp ENTER>;
+        };
+        tmn_FHc: tmn_FHc {
+            compatible = "zmk,behavior-macro";
+            label = "TMN_FHC";
+            #binding-cells = <0>;
+            bindings = <&kp L &kp X &kp H &kp S &kp ENTER>;
+        };
+        tmn_sysgen: tmn_sysgen {
+            compatible = "zmk,behavior-macro";
+            label = "TMN_SYSGEN";
+            #binding-cells = <0>;
+            bindings = <&kp X &kp T &kp F &kp J &kp ENTER>;
+        };
+        tmn_valve: tmn_valve {
+            compatible = "zmk,behavior-macro";
+            label = "TMN_VALVE";
+            #binding-cells = <0>;
+            bindings = <&kp F &kp M &kp F &kp J &kp ENTER>;
+        };
+        tmn_riserpipe: tmn_riserpipe {
+            compatible = "zmk,behavior-macro";
+            label = "TMN_RISERPIPE";
+            #binding-cells = <0>;
+            bindings = <&kp L &kp G &kp B &kp Z &kp ENTER>;
+        };
+        tmn_wsgen: tmn_wsgen {
+            compatible = "zmk,behavior-macro";
+            label = "TMN_WSGEN";
+            #binding-cells = <0>;
+            bindings = <&kp G &kp S &kp F &kp J &kp ENTER>;
+        };
+        tmn_wdgen: tmn_wdgen {
+            compatible = "zmk,behavior-macro";
+            label = "TMN_WDGEN";
+            #binding-cells = <0>;
+            bindings = <&kp P &kp S &kp F &kp J &kp ENTER>;
+        };
     };
 
     combos {
@@ -157,53 +245,53 @@
             bindings = <
 &kp Q&kp W  &kp F  &kp P          &kp G                   &kp J                  &kp L             &kp U      &kp Y                  &kp SEMI
 &kp A&kp R  &kp S  &kp T          &kp D                   &kp H                  &kp N             &kp E      &kp I                  &kp O
-&kp Z&kp X  &kp C  &kp V          &hm LEFT_SHIFT B        &kp K                  &kp M             &kp COMMA  &hm RIGHT_CONTROL DOT  &kp FSLH
-                   &qtl 1 ESCAPE  &hm LEFT_CONTROL SPACE  &qt RIGHT_SHIFT ENTER  &qtl 2 BACKSPACE
+&kp Z&kp X  &kp C  &kp V          &hm LEFT_SHIFT B        &kp K                  &kp M             &kp COMMA  &hm RIGHT_CONTROL DOT  &qmark_slash_shift
+                   &qtl 1 ESCAPE  &tab_space_ctrl         &qt RIGHT_ALT ENTER    &qtl 2 BACKSPACE
             >;
         };
 
         Layer_1 {
             bindings = <
-&kp LA(Q) &kp LA(W)       &kp UP_ARROW    &kp LA(F)        &kp F12    &kp KP_N7        &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS  &kp KP_PLUS
-&kp LA(A) &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none      &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_SLASH  &kp KP_ASTERISK
-&kp K_CALC&none           &none           &kp GRAVE        &kp TILDE  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp CARET     &kp BACKSPACE
-                                          &trans           &trans     &kp KP_NUMBER_0  &lt 3 KP_DOT
+&kp LA(Q)  &kp LA(W)       &kp UP_ARROW    &kp LA(F)        &kp F12    &kp KP_N7        &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS  &kp KP_PLUS
+&kp LA(A)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none      &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_SLASH  &kp KP_ASTERISK
+&kp K_CALC &none           &none           &kp GRAVE        &kp TILDE  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp CARET     &kp BACKSPACE
+                                           &trans           &trans     &kp KP_NUMBER_0  &lt 3 KP_DOT
             >;
         };
 
         layer_2 {
             bindings = <
-&kp LS(NUMBER_1)&kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(NUMBER_5)  &kp LS(NUMBER_6)  &kp LS(NUMBER_7)  &kp LS(N8)    &kp MINUS     &kp EQUAL
-&kp NUMBER_1    &kp NUMBER_2      &kp NUMBER_3      &kp NUMBER_4      &kp NUMBER_5      &kp NUMBER_6      &kp NUMBER_7      &kp NUMBER_8  &kp NUMBER_9  &kp N0
-&bt BT_SEL 0    &bt BT_SEL 1      &bt BT_SEL 2      &trans            &bt BT_CLR        &trans            &none             &none         &kp DELETE    &kp BACKSPACE
-                                                    &mo 3             &kp SPACE         &kp ENTER         &trans
+&kp LS(NUMBER_1) &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(NUMBER_5)  &kp LS(NUMBER_6)  &kp LS(NUMBER_7)  &kp LS(N8)    &kp MINUS     &kp EQUAL
+&kp NUMBER_1     &kp NUMBER_2      &kp NUMBER_3      &kp NUMBER_4      &kp NUMBER_5      &kp NUMBER_6      &kp NUMBER_7      &kp NUMBER_8  &kp NUMBER_9  &kp N0
+&trans           &trans            &trans            &trans            &trans            &trans            &none             &none         &kp DELETE    &kp BACKSPACE
+                                                     &mo 3             &kp SPACE         &trans            &trans
             >;
         };
 
         layer_3 {
             bindings = <
-&bt BT_SEL 0&bt BT_SEL 1  &bt BT_SEL 2  &none  &bt BT_CLR  &none  &none  &none  &none  &none
-&none       &none         &none         &none  &none       &none  &none  &none  &none  &none
-&kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &none  &none       &to 4  &none  &none  &none  &none
-                                        &none  &none       &none  &none
+&bt BT_SEL 0 &bt BT_SEL 1  &bt BT_SEL 2  &none  &bt BT_CLR  &none  &none  &none  &none  &none
+&none        &none         &none         &none  &none       &none  &none  &none  &none  &none
+&kp C_MUTE   &kp C_VOL_DN  &kp C_VOL_UP  &none  &none       &to 4  &none  &none  &none  &none
+                                         &none  &none       &none  &none
             >;
         };
 
         layer_4 {
             bindings = <
-&kp Q&kp W  &kp E  &kp P         &kp L                   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS   &kp KP_PLUS
-&kp A&kp R  &kp S  &kp T         &kp O                   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_SLASH   &kp KP_ASTERISK
-&kp Z&kp X  &kp C  &kp V         &kp M                   &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp BACKSPACE  &kp ENTER
-                   &lt 5 ESCAPE  &hm LEFT_CONTROL SPACE  &kp KP_NUMBER_0  &kp KP_DOT
+&kp Q &kp W  &kp E  &kp P         &kp L                   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS   &kp KP_PLUS
+&kp A &kp R  &kp S  &kp T         &kp O                   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_SLASH   &kp KP_ASTERISK
+&kp Z &kp X  &kp C  &kp V         &kp M                   &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp BACKSPACE  &kp ENTER
+                    &qtl 5 ESCAPE &tab_space_ctrl         &kp KP_NUMBER_0  &kp KP_DOT
             >;
         };
 
         layer_5 {
             bindings = <
-&trans          &trans  &trans  &trans  &trans  &kp TILDE  &trans  &trans         &trans            &trans
-&kp LA(A)       &trans  &trans  &trans  &trans  &trans     &trans  &trans         &trans            &trans
-&kp K_CALCULATOR&trans  &trans  &trans  &trans  &to 0      &trans  &kp LESS_THAN  &kp GREATER_THAN  &trans
-                                &trans  &trans  &trans     &trans
+&tmn_riserpipe    &tmn_wsgen  &tmn_wdgen  &pu          &pl      &kp TILDE  &trans  &trans         &trans            &trans
+&kp LA(A)         &trans      &tmn_s      &tmn_FHc     &di      &trans     &trans  &trans         &trans            &trans
+&kp K_CALCULATOR  &xl         &tmn_valve  &tmn_sysgen  &tmn_FH  &to 0      &trans  &kp LESS_THAN  &kp GREATER_THAN  &trans
+                                          &trans       &trans   &trans     &trans
             >;
         };
     };
