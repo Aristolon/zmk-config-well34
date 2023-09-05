@@ -137,7 +137,7 @@
 	    '-----------------\  30 |  31 |          |  32 |  33 /-----------------'
 	                       '--------------------------------'
 			
-        ctrl+alt    = 30 | 31 | 32 | 33
+        // ctrl+alt    = 30 | 31 | 32 | 33
         
 	    tab 	= 0  | 1		
 	    alt+F4 	= 0  | 24		
@@ -191,11 +191,11 @@
             timeout-ms = <40>;
         };
 
-        ctrl_plus_alt {
-            bindings = <&kp LA(LCTRL)>;
-            key-positions = <30 31 32 33>;
-            layers = <0 4>;
-        };
+      //  ctrl_plus_alt {
+      //      bindings = <&kp LA(LCTRL)>;
+      //      key-positions = <30 31 32 33>;
+      //      layers = <0 4>;
+      //  };
 
         combo_f1 {
             bindings = <&kp F1>;
@@ -272,7 +272,7 @@
                 &kp Q&kp W  &kp F  &kp P                 &kp G                   &kp J                  &kp L             &kp U      &kp Y                  &kp SEMI
                 &kp A&kp R  &kp S  &kp T                 &kp D                   &kp H                  &kp N             &kp E      &kp I                  &kp O
                 &kp Z&kp X  &kp C  &kp V                 &hm LEFT_SHIFT B        &kp K                  &kp M             &kp COMMA  &hm RIGHT_CONTROL DOT  &hm RIGHT_SHIFT SLASH
-                                   &qt LEFT_CTRL ESCAPE  &qtl 1 SPACE            &qtl 2 ENTER           &qt RIGHT_ALT BACKSPACE
+                                   &qt LEFT_CONTROL ESCAPE  &qtl 1 SPACE         &qtl 2 ENTER           &qt RIGHT_ALT BACKSPACE
             >;
         };
 
@@ -308,7 +308,7 @@
                 &kp Q &kp W  &kp E  &kp P                 &kp L                   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS   &kp KP_PLUS
                 &kp A &kp R  &kp S  &kp T                 &kp O                   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_SLASH   &kp KP_ASTERISK
                 &kp Z &kp X  &kp C  &kp V                 &kp M                   &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp BACKSPACE  &kp ENTER
-                                    &qt LEFT_CTRL ESCAPE  &qtl 5 SPACE            &kp KP_NUMBER_0  &kp KP_DOT
+                                    &qt LEFT_CONTROL ESCAPE  &qtl 5 SPACE         &kp KP_NUMBER_0  &kp KP_DOT
             >;
         };
 
