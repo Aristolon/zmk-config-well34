@@ -18,14 +18,6 @@
 
 / {
     behaviors {
-        qmark_slash_shift: qmark_slash_shift {
-            compatible = "zmk,behavior-tap-dance";
-            label = "QMARK_SLASH_SHIFT";
-            #binding-cells = <0>;
-            bindings =
-                <&mt RIGHT_SHIFT SLASH>,
-                <&kp QMARK>;
-        };
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "homerow mods";
