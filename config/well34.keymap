@@ -18,13 +18,29 @@
 
 / {
     behaviors {
-	td: tap_dance {
+	td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE";
+            label = "TAP_DANCE_0";
             #binding-cells = <0>;
             tapping-term-ms = <100>;
-            bindings = 	<&kp N1>, 
-			<&kp N2>;
+            bindings = 	<&kp O>, 
+			<&kp D>;
+        };
+	td1: tap_dance_1 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_1";
+            #binding-cells = <0>;
+            tapping-term-ms = <100>;
+            bindings = 	<&kp L>, 
+			<&kp I>;
+        };
+	td2: tap_dance_2 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_2";
+            #binding-cells = <0>;
+            tapping-term-ms = <100>;
+            bindings = 	<&kp E>, 
+			<&kp F>;
         };
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
@@ -313,10 +329,10 @@
 
         layer_4 {
             bindings = <
-                &kp Q &kp W  &td E F 	&kp P                 &td L I                 &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS   &kp KP_PLUS
-                &kp A &kp R  &kp S  	&kp T                 &td O D                 &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_SLASH   &kp KP_ASTERISK
+                &kp Q &kp W  &td2 	&kp P                 &td1                &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS   &kp KP_PLUS
+                &kp A &kp R  &kp S  	&kp T                 &td0                &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_SLASH   &kp KP_ASTERISK
                 &kp Z &kp X  &kp C  	&kp V                 &hm LEFT_SHIFT M	  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp BACKSPACE  &kp ENTER
-                                    	&qt LEFT_CONTROL ESCAPE  &qtl 5 SPACE         &kp KP_NUMBER_0  &kp KP_DOT
+                                    	&qt LEFT_CONTROL ESCAPE  &qtl 5 SPACE     &kp KP_NUMBER_0  &kp KP_DOT
             >;
         };
 
