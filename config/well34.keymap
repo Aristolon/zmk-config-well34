@@ -18,6 +18,15 @@
 
 / {
     behaviors {
+	td: tap_dance {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE";
+            #binding-cells = <0>;
+            tapping-term-ms = <100>;
+            bindings = 	<&kp N1>, 
+			<&kp N2>, 
+			<&kp N3>;
+        };
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "homerow mods";
@@ -44,7 +53,7 @@
             label = "QUICK_TAP_LAYER";
             #binding-cells = <2>;
             tapping-term-ms = <170>;
-            quick-tap-ms = <120>;
+            quick-tap-ms = <100>;
             flavor = "hold-preferred";
             bindings =
                 <&mo>,
@@ -296,19 +305,19 @@
 
         layer_3 {
             bindings = <
-                &bt BT_SEL 0 &bt BT_SEL 1  &bt BT_SEL 2  &none  &bt BT_CLR  &none  &none  &none  &none  &none
-                &none        &none         &none         &none  &none       &none  &none  &none  &none  &none
-                &kp C_MUTE   &kp C_VOL_DN  &kp C_VOL_UP  &none  &none       &to 4  &none  &none  &none  &none
-                                                         &none  &none       &none  &none
+                &bt BT_SEL 0 &bt BT_SEL 1  &bt BT_SEL 2  &none  &bt BT_CLR  	&none  &none  &none  &none  &none
+                &none        &none         &none         &none  &none       	&none  &none  &none  &none  &none
+                &kp C_MUTE   &kp C_VOL_DN  &kp C_VOL_UP  &none  &none       	&to 4  &none  &none  &none  &none
+                                                         &none  &none       	&none  &none
             >;
         };
 
         layer_4 {
             bindings = <
-                &kp Q &kp W  &kp E  &kp P                 &kp L                   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS   &kp KP_PLUS
-                &kp A &kp R  &kp S  &kp T                 &kp O                   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_SLASH   &kp KP_ASTERISK
-                &kp Z &kp X  &kp C  &kp V                 &kp M                   &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp BACKSPACE  &kp ENTER
-                                    &qt LEFT_CONTROL ESCAPE  &qtl 5 SPACE         &kp KP_NUMBER_0  &kp KP_DOT
+                &kp Q &kp W  &td E F 	&kp P                 &td L I                 &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS   &kp KP_PLUS
+                &kp A &kp R  &kp S  	&kp T                 &td O D                 &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_SLASH   &kp KP_ASTERISK
+                &kp Z &kp X  &kp C  	&kp V                 &hm LEFT_SHIFT M	  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp BACKSPACE  &kp ENTER
+                                    	&qt LEFT_CONTROL ESCAPE  &qtl 5 SPACE         &kp KP_NUMBER_0  &kp KP_DOT
             >;
         };
 
