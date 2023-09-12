@@ -46,7 +46,7 @@
             label = "TAP_DANCE_3";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = 	<&hm LEFT_SHIFT M>, 
+            bindings = 	<&kp M>, 
 			            <&kp B>;
         };
         hm: homerow_mods {
@@ -303,10 +303,10 @@
 
         Default_layer {
             bindings = <
-                &kp Q&kp W  &kp F  &kp P                 &kp G                   &kp J                  &kp L             &kp U      &kp Y                  &kp SEMI
-                &kp A&kp R  &kp S  &kp T                 &kp D                   &kp H                  &kp N             &kp E      &kp I                  &kp O
-                &kp Z&kp X  &kp C  &kp V                 &hm LEFT_SHIFT B        &kp K                  &kp M             &kp COMMA  &hm RIGHT_CONTROL DOT  &hm RIGHT_SHIFT SLASH
-                                   &qt LEFT_CONTROL ESCAPE  &qtl 1 SPACE         &qtl 2 ENTER           &qt RIGHT_ALT BACKSPACE
+                &kp Q               &kp W  &kp F  &kp P     &kp G           &kp J                  &kp L             &kp U      &kp Y    &kp SEMI
+                &kp A               &kp R  &kp S  &kp T     &kp D           &kp H                  &kp N             &kp E      &kp I    &kp O
+                &hm LEFT_SHIFT Z    &kp X  &kp C  &kp V     &hm LEFT_ALT B  &hm RIGHT_CONTROL K    &kp M             &kp COMMA  &kp DOT  &hm RIGHT_SHIFT SLASH
+                                   &qt LEFT_CONTROL ESCAPE  &qtl 1 SPACE    &qtl 2 ENTER           &qt RIGHT_ALT BACKSPACE
             >;
         };
 
@@ -339,10 +339,10 @@
 
         layer_4 {
             bindings = <
-                &kp Q &kp W  &td2 	&kp P                 &td1                &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS   &kp KP_PLUS
-                &kp A &kp R  &kp S  &kp T                 &td0                &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_SLASH   &kp KP_ASTERISK
-                &kp Z &kp X  &kp C  &kp V                 &td3      	      &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp BACKSPACE  &kp ENTER
-                                    &qt LEFT_CONTROL ESCAPE  &qtl 5 SPACE     &kp KP_NUMBER_0  &kp KP_DOT
+                &kp Q            &kp W  &td2 	&kp P                &td1             &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS   &kp KP_PLUS
+                &kp A            &kp R  &kp S  &kp T                 &td0             &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_SLASH   &kp KP_ASTERISK
+                &hm LEFT_SHIFT Z &kp X  &kp C  &kp V                 &td3      	      &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp BACKSPACE  &kp ENTER
+                                    &qt LEFT_CONTROL ESCAPE  &qtl 5 SPACE             &kp KP_NUMBER_0  &kp KP_DOT
             >;
         };
 
