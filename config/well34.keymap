@@ -225,7 +225,7 @@
         };
 
         ctrl_plus_shift {
-            bindings = <&kp LC(LEFT_SHIFT)>;
+            bindings = <&kp LC(LS(LCTRL))>;
             key-positions = <10 20>;
             layers = <0 4>;
             timeout-ms = <40>;
