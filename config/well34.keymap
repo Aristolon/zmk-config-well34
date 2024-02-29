@@ -209,7 +209,7 @@
         cb_question {
             bindings = <&kp QMARK>;
             key-positions = <27 28>;
-            layers = <0>;
+            layers = <0 6>;
             timeout-ms = <40>;
         };
 
@@ -230,7 +230,7 @@
         ctrl_plus_shift {
             bindings = <&kp LC(LS(LCTRL))>;
             key-positions = <10 20>;
-            layers = <0 4>;
+            layers = <0 4 6>;
             timeout-ms = <40>;
         };
 
@@ -312,10 +312,10 @@
 
         Default_layer {
             bindings = <
-                &kp Q               &kp W  &kp F    &kp P                     &kp G             &kp J           &kp L     &kp U      &kp Y    &kp SEMI
-                &kp A               &kp R  &kp S    &kp T                     &kp D             &kp H           &kp N     &kp E      &kp I    &kp O
-                &hm LEFT_SHIFT Z    &kp X  &kp C    &kp V                     &kp B             &kp  K          &kp M     &kp COMMA  &hm RIGHT_CONTROL DOT  &hm RIGHT_SHIFT SLASH
-                                                    &qt LEFT_CONTROL ESCAPE   &qtl 1 SPACE      &qtl 2 ENTER    &qt RIGHT_ALT BACKSPACE
+                &kp Q    &kp W      &kp F    &kp P                      &kp G                   &kp J           &kp L     &kp U      &kp Y                  &kp SEMI
+                &kp A    &kp R      &kp S    &kp T                      &kp D                   &kp H           &kp N     &kp E      &kp I                  &kp O
+                &kp Z    &kp X      &kp C    &kp V                      &hm LEFT_SHIFT B        &kp K           &kp M     &kp COMMA  &hm RIGHT_CONTROL DOT  &hm RIGHT_SHIFT SLASH
+                                             &qt LEFT_CONTROL ESCAPE    &qtl 1 SPACE            &qtl 2 ENTER    &qt RIGHT_ALT BACKSPACE
             >;
         };
 
@@ -375,10 +375,10 @@
 
         layer_7 {
             bindings = <
-                &kp F1        &kp F2        &kp F3        &kp F4         &kp F5              &none  &none  &none  &none  &none
-                &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4   &kp NUMBER_5        &none  &none  &none  &none  &none
-                &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9   &kp NUMBER_0        &to 0  &none  &none  &none  &none
-                                                          &none          &none               &none  &none
+                &kp F1        &kp F2        &kp F3        &kp F4         &kp F5              &kp F6  &kp F7  &none  &none  &none
+                &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4   &kp NUMBER_5        &none   &none   &none  &none  &none
+                &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9   &kp NUMBER_0        &to 0   &none   &none  &none  &none
+                                                          &none          &none               &none   &none
             >;
         };
     };
