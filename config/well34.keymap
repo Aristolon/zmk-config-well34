@@ -197,10 +197,11 @@
         ctrl+shift    = 10 | 20
         
 	    tab 	= 0  | 1		
-	    alt+F4 	= 0  | 24		
-		?    	= 27 | 28		
-	    "    	= 12 | 13		
-	    '   	= 11 | 12		
+	    alt+F4 	= 0  | 24
+        !    	= 0  | 1  | 2
+		?    	= 27 | 28 | 29		
+	    "    	= 11 | 13		
+	    '   	= 21 | 23		
 
         F1	    = 0  | 10
         F2	    = 1  | 11
@@ -227,23 +228,30 @@
             timeout-ms = <40>;
         };
 
+        cb_exclamation {
+            bindings = <&kp EXCL>;
+            key-positions = <0 1 2>;
+            layers = <0 6>;
+            timeout-ms = <40>;
+        };
+        
         cb_question {
             bindings = <&kp QMARK>;
-            key-positions = <27 28>;
+            key-positions = <27 28 29>;
             layers = <0 6>;
             timeout-ms = <40>;
         };
 
         cb_doublequotes {
             bindings = <&kp DQT>;
-            key-positions = <12 13>;
+            key-positions = <11 13>;
             layers = <0>;
             timeout-ms = <40>;
         };
 
         cb_singlequote {
             bindings = <&kp SQT>;
-            key-positions = <11 12>;
+            key-positions = <21 23>;
             layers = <0>;
             timeout-ms = <40>;
         };
@@ -335,8 +343,8 @@
             bindings = <
                 &kp Q    &kp W      &kp F    &kp P                      &kp G                   &kp J           &kp L     &kp U                 &kp Y                  &kp BACKSPACE
                 &kp A    &kp R      &kp S    &kp T                      &kp D                   &kp H           &kp N     &kp E                 &kp I                  &kp O
-                &kp Z    &kp X      &kp C    &kp V                      &hm LEFT_SHIFT B        &kp K           &kp M     &hm LEFT_GUI COMMA    &hm RIGHT_CONTROL DOT  &hm RIGHT_SHIFT SLASH
-                                             &qt LEFT_CONTROL ESCAPE    &qtl 1 SPACE            &qtl 2 ENTER    &qt RIGHT_ALT SEMI
+                &kp Z    &kp X      &kp C    &kp V                      &hm LEFT_SHIFT B        &kp K           &kp M     &hm RIGHT_ALT COMMA   &hm RIGHT_CONTROL DOT  &hm RIGHT_SHIFT SLASH
+                                             &qt LEFT_CONTROL ESCAPE    &qtl 1 SPACE            &qtl 2 ENTER    &qt LEFT_GUI SEMI
             >;
         };
 
