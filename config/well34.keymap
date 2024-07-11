@@ -215,7 +215,8 @@
         ]       = 15 | 16
         {       = 23 | 24
         }       = 25 | 26
-	    
+
+        ENTER   = 19 | 29 (layer_4)	    
     */
 
     combos {
@@ -225,6 +226,13 @@
             bindings = <&kp TAB>;
             key-positions = <0 1>;
             layers = <0 4 6>;
+            timeout-ms = <40>;
+        };
+
+        enter {
+            bindings = <&kp ENTER>;
+            key-positions = <19 29>;
+            layers = <4>;
             timeout-ms = <40>;
         };
 
@@ -359,7 +367,7 @@
             bindings = <
                 &kp LA(Q)     &kp LA(W)       &td4            &kp LA(F)        &kp F12          &kp KP_NUMBER_7       &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS  &kp KP_PLUS
                 &kp LA(A)     &kp LEFT_ARROW  &td5            &kp RIGHT_ARROW  &none            &kp KP_NUMBER_4       &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_SLASH  &kp KP_ASTERISK
-                &kp C_AL_CALC &none           &kp LC(LA(C))   &none            &none            &kp KP_NUMBER_1       &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp CARET     &kp BACKSPACE
+                &kp C_AL_CALC &none           &kp LC(LA(C))   &none            &none            &kp KP_NUMBER_1       &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp DELETE    &kp BACKSPACE
                                                               &trans           &trans           &qtl 3 KP_NUMBER_0    &kp DOT
             >;
         };
@@ -384,10 +392,10 @@
 
         layer_4 {
             bindings = <
-                &kp Q            &kp W  &td2   &kp P                 &td1             &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS   &kp KP_PLUS
-                &kp A            &kp R  &kp S  &kp T                 &td0             &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_SLASH   &kp KP_ASTERISK
-                &hm LEFT_SHIFT Z &kp X  &kp C  &kp V                 &td3      	      &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp BACKSPACE  &kp ENTER
-                                    &qt LEFT_CONTROL ESCAPE  &qtl 5 SPACE             &kp KP_NUMBER_0  &kp KP_DOT
+                &kp Q            &kp W  &td2    &kp P                    &td1             &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS   &kp KP_PLUS
+                &kp A            &kp R  &kp S   &kp T                    &td0             &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_SLASH   &kp KP_ASTERISK
+                &hm LEFT_SHIFT Z &kp X  &kp C   &kp V                    &td3      	      &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp DELETE     &kp BACKSPACE
+                                                &qt LEFT_CONTROL ESCAPE  &qtl 5 SPACE     &kp KP_NUMBER_0  &kp KP_DOT
             >;
         };
 
