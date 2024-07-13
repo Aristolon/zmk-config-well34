@@ -216,12 +216,19 @@
         {       = 23 | 24
         }       = 25 | 26
 
-        ENTER   = 19 | 29 (layer_4)	    
+        ENTER   = 18 | 19 (layer_4)	    
     */
 
     combos {
         compatible = "zmk,combos";
 
+        cb_bootloarder {
+            bindings = <&bootloader>;
+            key-positions = <13 16>;
+            layers = <3>;
+            timeout-ms = <40>;
+        };      
+        
         tab {
             bindings = <&kp TAB>;
             key-positions = <0 1>;
@@ -231,7 +238,7 @@
 
         enter {
             bindings = <&kp ENTER>;
-            key-positions = <19 29>;
+            key-positions = <18 19>;
             layers = <4>;
             timeout-ms = <40>;
         };
