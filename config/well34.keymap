@@ -220,14 +220,7 @@
     */
 
     combos {
-        compatible = "zmk,combos";
-
-        cb_bootloarder {
-            bindings = <&bootloader>;
-            key-positions = <13 16>;
-            layers = <3>;
-            timeout-ms = <40>;
-        };      
+        compatible = "zmk,combos";   
         
         tab {
             bindings = <&kp TAB>;
@@ -239,11 +232,11 @@
         enter {
             bindings = <&kp ENTER>;
             key-positions = <18 19>;
-            layers = <4>;
+            layers = <1 4>;
             timeout-ms = <40>;
         };
 
-        cb_bootloarder {
+        cb_bootloader {
             bindings = <&bootloader>;
             key-positions = <13 16>;
             layers = <3>;
