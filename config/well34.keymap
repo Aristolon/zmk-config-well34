@@ -260,14 +260,14 @@
         cb_doublequotes {
             bindings = <&kp DQT>;
             key-positions = <11 13>;
-            layers = <0>;
+            layers = <0 4>;
             timeout-ms = <40>;
         };
 
         cb_singlequote {
             bindings = <&kp SQT>;
             key-positions = <21 23>;
-            layers = <0>;
+            layers = <0 4>;
             timeout-ms = <40>;
         };
 
