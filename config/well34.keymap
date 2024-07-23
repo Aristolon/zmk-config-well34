@@ -376,7 +376,7 @@
             bindings = <
                 &kp TILDE       &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)   &kp LS(NUMBER_5)        &kp LS(NUMBER_6)  &kp LS(NUMBER_7)  &kp LS(N8)    &kp MINUS     &kp EQUAL
                 &kp NUMBER_1    &kp NUMBER_2      &kp NUMBER_3      &kp NUMBER_4       &kp NUMBER_5            &kp NUMBER_6      &kp NUMBER_7      &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
-                &none           &kp GRAVE         &kp BACKSLASH     &kp PIPE           &kp UNDER               &trans            &none             &none         &kp KP_DOT    &kp DELETE
+                &kp GRAVE       &kp KP_SLASH      &kp PIPE          &kp BACKSLASH      &kp UNDER               &trans            &none             &none         &kp KP_DOT    &kp DELETE
                                                                     &kp LEFT_CONTROL   &qtl 3 SPACE            &trans            &trans
             >;
         };
@@ -401,9 +401,9 @@
 
         layer_5 {
             bindings = <
-                &tmn_riserpipe    &tmn_wsgen  &tmn_wdgen  &pu          &pl          &kp TILDE  &kp GRAVE    &kp BACKSLASH   &kp PIPE            &kp UNDER
-                &kp LA(A)         &trans      &tmn_s      &tmn_FHc     &di          &trans     &trans       &trans          &kp LS(NUMBER_2)    &kp Q
-                &kp C_AL_CALC     &xl         &tmn_valve  &tmn_sysgen  &tmn_FH      &to 0      &trans       &kp LESS_THAN   &kp GREATER_THAN    &trans
+                &tmn_riserpipe    &tmn_wsgen  &tmn_wdgen  &pu          &pl          &kp TILDE  &kp KP_SLASH     &kp PIPE        &kp BACKSLASH       &kp UNDER
+                &kp LA(A)         &trans      &tmn_s      &tmn_FHc     &di          &trans     &trans           &trans          &kp LS(NUMBER_2)    &kp Q
+                &kp C_AL_CALC     &xl         &tmn_valve  &tmn_sysgen  &tmn_FH      &to 0      &trans           &kp LESS_THAN   &kp GREATER_THAN    &trans
                                                           &trans       &trans       &trans     &trans
             >;
         };
