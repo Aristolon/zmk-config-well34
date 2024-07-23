@@ -368,16 +368,16 @@
                 &kp LA(Q)     &kp LA(W)       &td4            &kp LA(F)        &kp F12          &kp KP_NUMBER_7       &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS  &kp KP_PLUS
                 &kp LA(A)     &kp LEFT_ARROW  &td5            &kp RIGHT_ARROW  &none            &kp KP_NUMBER_4       &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_SLASH  &kp KP_ASTERISK
                 &kp C_AL_CALC &none           &kp LC(LA(C))   &none            &none            &kp KP_NUMBER_1       &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp DELETE    &kp BACKSPACE
-                                                              &trans           &trans           &qtl 3 KP_NUMBER_0    &kp DOT
+                                                              &trans           &trans           &qtl 3 KP_NUMBER_0    &kp KP_DOT
             >;
         };
 
         layer_2 {
             bindings = <
-                &kp LS(NUMBER_1) &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)   &kp LS(NUMBER_5)        &kp LS(NUMBER_6)  &kp LS(NUMBER_7)  &kp LS(N8)    &kp MINUS     &kp EQUAL
-                &kp NUMBER_1     &kp NUMBER_2      &kp NUMBER_3      &kp NUMBER_4       &kp NUMBER_5            &kp NUMBER_6      &kp NUMBER_7      &kp NUMBER_8  &kp NUMBER_9  &kp N0
-                &kp TILDE        &kp GRAVE         &kp BACKSLASH     &kp PIPE           &kp UNDER               &trans            &none             &none         &none         &kp DELETE
-                                                                     &kp LEFT_CONTROL   &qtl 3 SPACE            &trans            &trans
+                &kp TILDE       &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)   &kp LS(NUMBER_5)        &kp LS(NUMBER_6)  &kp LS(NUMBER_7)  &kp LS(N8)    &kp MINUS     &kp EQUAL
+                &kp NUMBER_1    &kp NUMBER_2      &kp NUMBER_3      &kp NUMBER_4       &kp NUMBER_5            &kp NUMBER_6      &kp NUMBER_7      &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
+                &none           &kp GRAVE         &kp BACKSLASH     &kp PIPE           &kp UNDER               &trans            &none             &none         &kp KP_DOT    &kp DELETE
+                                                                    &kp LEFT_CONTROL   &qtl 3 SPACE            &trans            &trans
             >;
         };
 
